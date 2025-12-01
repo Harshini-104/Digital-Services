@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Services</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- header section -->
+  <header class="header">
+    <nav>
+      <div class="logo">
+        <a href=""><img src="./image/logo.webp" alt="company logo"></a>
+      </div>
+      <ul class="nav-links">
+        <!-- <li><a href="./index.html">Home</a></li> -->
+        <li class="dropdown" id="homeDropdownWrapper">
+          <a href="./index.html">Home <span id="homeLink">▼</span></a>
+          <ul class="dropdown-menu" id="homeDropdown">
+            <li><a href="./home2.html">Home2</a></li>
+          </ul>
+        </li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./service.html">Service</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <a href="./login.html"><button class="loginbtn">LogIn</button></a>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <!-- section main -->
+
+
+  <section class="digital-hero">
+    <div class="hero-container">
+
+      <div class="hero-text">
+        <h1>Empowering Your Business With Smart Digital Solutions</h1>
+        <p>
+          We provide end-to-end digital services including web development, branding, SEO,
+          social media management, and data-driven marketing strategies that help your business
+          grow online and stay ahead in the digital world.
+        </p>
+
+        <a href="#get-started" class="hero-btn">Get Started</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- section service -->
+
+  <section class="services">
+    <div class="services-header">
+      <span>SERVICES</span>
+      <h2>What We Do</h2>
+    </div>
+
+    <div class="services-container">
+
+      <!-- IT Solutions -->
+      <div class="service-card">
+        <div class="icon-box blue">
+          <i class="fa-solid fa-computer"></i>
+        </div>
+        <h3>IT Solutions</h3>
+        <p>
+          We provide advanced IT services to support your business needs with modern technologies.
+        </p>
+      </div>
+
+      <!-- Security System -->
+      <div class="service-card">
+        <div class="icon-box light-blue">
+          <i class="fa-solid fa-fingerprint"></i>
+        </div>
+        <h3>Security System</h3>
+        <p>
+          Protect your digital data with high-level security and intelligent monitoring systems.
+        </p>
+      </div>
+
+      <!-- Web Development -->
+      <div class="service-card">
+        <div class="icon-box yellow">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3>Web Development</h3>
+        <p>
+          Custom websites that are fast, responsive, and designed for business growth.
+        </p>
+      </div>
+
+      <!-- Database Security -->
+      <div class="service-card">
+        <div class="icon-box red">
+          <i class="fa-solid fa-database"></i>
+        </div>
+        <h3>Database Security</h3>
+        <p>
+          Secure your business data with our expert database protection solutions.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- section features -->
+
+  <section class="core-features">
+    <div class="container">
+      <div class="features-content">
+        <!-- Left side image -->
+        <div class="features-image">
+          <img src="./image/digital1.webp" alt="Digital Marketing">
+        </div>
+
+        <!-- Right side content -->
+        <div class="features-text">
+          <h2>CORE FEATURES</h2>
+          <h3>Get More Good Experience.</h3>
+          <p>Our knowledge of computers will help us.</p>
+          <p>
+            Does any industry face a more complex audience journey and marketing sales process than B2B technology?
+            Consider the number of people who influence a sale, the length of the decision-making cycle, the competing
+            interests of the people who purchase, implement, manage, and use the technology. It’s a lot meaningful
+            content here.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- core features -->
+
+  <section class="latest-services">
+    <div class="container">
+      <div class="services-header">
+        <h2>OUR LATEST SERVICES</h2>
+        <h3>We Offer Better Solutions<br>For Your IT Business</h3>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h4>Web Development</h4>
+          <p>Create responsive, fast, and modern websites to boost your online presence.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4>Digital Marketing</h4>
+          <p>Increase your reach and sales with targeted campaigns and SEO strategies.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h4>Mobile App Development</h4>
+          <p>Design and develop interactive mobile applications for Android and iOS.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h4>Cloud Solutions</h4>
+          <p>Secure and scalable cloud solutions to optimize your business processes.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h4>Cybersecurity</h4>
+          <p>Protect your data and infrastructure with advanced security measures.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h4>Analytics & Reporting</h4>
+          <p>Get actionable insights from your data to drive informed business decisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- latest updates -->
+
+  <section class="digital-services-case">
+    <div class="container">
+      <div class="section-header">
+        <span>LATEST DIGITAL SERVICES</span>
+        <h2>Explore Our Digital Services</h2>
+      </div>
+
+      <div class="services-slider">
+        <div class="service-card">
+          <img src="./image/web.webp" alt="Web Development">
+          <div class="service-overlay">
+            <span>IT / Solutions</span>
+            <h3>Web Development</h3>
+
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="./image/marketing.webp" alt="Digital Marketing">
+          <div class="service-overlay">
+            <span>Marketing / Solutions</span>
+            <h3>Digital Marketing</h3>
+
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="./image/app.webp" alt="Mobile App Development">
+          <div class="service-overlay">
+            <span>IT / Solutions</span>
+            <h3>Mobile App Development</h3>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- section news -->
+
+  <section class="latest-news">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest News</h2>
+        <p>Read Our Latest News & Blog</p>
+      </div>
+
+      <div class="news-grid">
+        <div class="news-card">
+          <img src="./image/webdevelopment.webp" alt="Web Development Update">
+          <div class="news-content">
+            <span class="author">By Admin, 05 Aug 2019</span>
+            <h3>Monthly Web Development Update: Design Ethics & Clarity Over Solution</h3>
+            <a href="./error.html" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="./image/design.webp" alt="Design System">
+          <div class="news-content">
+            <span class="author">By Admin, 05 Aug 2019</span>
+            <h3>Design System: What It Is And How To Create One Using Indigo Design Sense</h3>
+            <a href="./error.html" class="read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="./image/webassembely.webp" alt="WebAssembly">
+          <div class="news-content">
+            <span class="author">By Admin, 05 Aug 2019</span>
+            <h3>How We Used WebAssembly To Speed Up Our Web App By Omnivus</h3>
+            <a href="./error.html" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section footer -->
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <!-- Logo & About -->
+      <div class="footer-logo">
+        <img src="./image/logo.webp" alt="Digital Services Logo">
+        <p>Your trusted partner in digital solutions, delivering innovative web, app, and marketing services.</p>
+
+        <br>
+
+        <p>We provide comprehensive digital solutions designed to help businesses thrive in the online world.
+          From creating visually engaging websites and mobile applications to optimizing your online presence with SEO
+          and digital marketing, our services are tailored to meet your unique needs. We focus on delivering innovative
+          strategies, seamless user experiences, and measurable results that drive growth, enhance brand visibility, and
+          connect you with your target audience effectively.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: info@digitalservices.com</p>
+        <p>Phone: +91 12345 67890</p>
+        <p>Address: 123 Digital St, Tech City, India</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="./error.html"><img src="./image/facebook.jpg" alt="Facebook"></a>
+          <a href="./error.html"><img src="./image/twitter.png" alt="Twitter"></a>
+          <a href="./error.html"><img src="./image/link.jpg" alt="LinkedIn"></a>
+          <a href="./error.html"><img src="./image/insta.jpg" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Digital Services. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("active");
+    }
+  </script>
+
+</body>
+
+</html>

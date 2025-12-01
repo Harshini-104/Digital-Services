@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Services</title>
+  <link rel="stylesheet" href="./contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- header section -->
+  <header class="header">
+    <nav>
+      <div class="logo">
+        <a href=""><img src="./image/logo.webp" alt="company logo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./service.html">Service</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <a href="./login.html"><button class="loginbtn">LogIn</button></a>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <!-- section main -->
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --muted: #8b96a8;
+      --accent: #ff8a00;
+      --green: #37b24d;
+      --red: #ff4d6d;
+      --glass: rgba(255, 255, 255, 0.6);
+      --shadow: 0 6px 18px rgba(25, 40, 80, 0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(180deg, var(--bg), #eef2f7 60%);
+      color: #122;
+      line-height: 1.35
+    }
+
+    .wrap {
+      max-width: 1150px;
+      margin: 28px auto;
+      padding: 22px;
+    }
+
+    /* Header */
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 18px;
+      padding-top: 55px;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.2px
+    }
+
+    .title p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+
+    /* Stat cards (top row) */
+    .stats {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      flex: 1 1 220px;
+      background: var(--card);
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      min-width: 200px;
+    }
+
+    .stat .label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px
+    }
+
+    .stat .value {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 8px
+    }
+
+    .stat.small {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    /* Left main column */
+    .left {
+      grid-column: 1 / 8;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Right column */
+    .right {
+      grid-column: 8 / -1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Card */
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 14px
+    }
+
+    /* Small bar chart */
+    .bars {
+      display: flex;
+      gap: 6px;
+      align-items: flex-end;
+      height: 70px;
+      padding: 8px 4px
+    }
+
+    .bar {
+      width: 24px;
+      border-radius: 6px 6px 0 0;
+      background: linear-gradient(180deg, #ffb16b, #ff8a00);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center
+    }
+
+    .bar.alt {
+      background: linear-gradient(180deg, #7dcfff, #2494ff)
+    }
+
+    .bar span {
+      font-size: 11px;
+      color: white;
+      padding: 4px 0;
+      display: block;
+      opacity: 0.95
+    }
+
+    /* KPI list on right */
+    .kpis {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .kpi {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #fff, #fbfcff);
+      border: 1px solid rgba(10, 20, 40, 0.03)
+    }
+
+    .kpi small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    .kpi strong {
+      font-size: 16px
+    }
+
+    /* Line chart placeholder (SVG) */
+    .chart-wrap {
+      height: 220px;
+      padding: 6px
+    }
+
+    svg {
+      width: 100%;
+      height: 100%
+    }
+
+    /* Legend and small stats */
+    .row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .stat-mini {
+      flex: 1;
+      min-width: 120px;
+      padding: 10px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #fff, #fafbff);
+      text-align: center;
+      border: 1px solid rgba(10, 20, 40, 0.03)
+    }
+
+    .stat-mini .num {
+      font-weight: 700;
+      font-size: 16px
+    }
+
+    .legend {
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    /* Donut (right column) */
+    .donut {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .donut svg {
+      width: 140px;
+      height: 140px
+    }
+
+    .donut .legend {
+      flex: 1;
+    }
+
+
+    /* section footer */
+
+
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 60px 0 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #007bff;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+
+.footer-contact p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social .social-icons img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s;
+}
+
+.footer-social .social-icons img:hover {
+  transform: scale(1.2);
+}
+
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+@media(max-width: 768px){
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+
+    /* Responsive */
+    @media (max-width:900px) {
+      .left {
+        grid-column: 1 / -1
+      }
+
+      .right {
+        grid-column: 1 / -1
+      }
+
+      .grid {
+        grid-auto-rows: min-content
+      }
+
+      .stats {
+        flex-direction: column
+      }
+    }
+
+    /* tiny helpers */
+    .muted {
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .pill {
+      background: #e9f8ee;
+      color: var(--green);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px
+    }
+
+    .smalltxt {
+      font-size: 12px;
+      color: var(--muted)
+    }
+  </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <div class="title">
+          <h1>Digital Services Dashboard</h1>
+          <p class="smalltxt">Performance overview of the last 12 months — interactive mockup (HTML/CSS)</p>
+        </div>
+        <div class="smalltxt">Updated just now</div>
+      </div>
+
+      <div class="grid">
+
+        <!-- Stats row -->
+        <div class="stats">
+          <div class="stat">
+            <div class="label">Total Revenue</div>
+            <div class="value">$12,890.00</div>
+            <div class="smalltxt">Compared to last month</div>
+          </div>
+
+          <div class="stat">
+            <div class="label">Project Earnings</div>
+            <div class="value">$4,345.00</div>
+            <div style="margin-top:8px"><span class="pill">+8%</span> <span class="smalltxt" style="margin-left:8px">vs
+                previous</span></div>
+          </div>
+
+          <div class="stat">
+            <div class="label">Operational Cost</div>
+            <div class="value">$2,890.00</div>
+            <div style="margin-top:8px"><span style="color:var(--red);font-weight:700;">-4%</span> <span
+                class="smalltxt" style="margin-left:8px">vs previous</span></div>
+          </div>
+        </div>
+
+        <!-- Left column -->
+        <div class="left">
+          <div class="card">
+            <h3>Service Overview</h3>
+            <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+              <div style="flex:1;">
+                <div class="bars" aria-hidden="true">
+                  <div class="bar" style="height:62%"><span>62</span></div>
+                  <div class="bar alt" style="height:45%"><span>45</span></div>
+                  <div class="bar" style="height:78%"><span>78</span></div>
+                  <div class="bar alt" style="height:35%"><span>35</span></div>
+                  <div class="bar" style="height:88%"><span>88</span></div>
+                  <div class="bar alt" style="height:55%"><span>55</span></div>
+                  <div class="bar" style="height:72%"><span>72</span></div>
+                  <div class="bar alt" style="height:48%"><span>48</span></div>
+                </div>
+                <div class="smalltxt" style="padding:6px 4px">Monthly digital service performance</div>
+              </div>
+
+              <div style="width:160px">
+                <div
+                  style="background:linear-gradient(180deg,#fff,#f7fbff);padding:10px;border-radius:8px;text-align:center;border:1px solid rgba(10,20,40,0.03)">
+                  <div class="muted">Overall Efficiency</div>
+                  <div style="font-weight:700;font-size:20px;margin-top:6px">76%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Lead Conversion Rate</h3>
+            <div class="chart-wrap">
+              <svg viewBox="0 0 800 220" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#bfe9ff" stop-opacity="0.6" />
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect x="0" y="0" width="100%" height="100%" fill="none" />
+                <path
+                  d="M0,160 C80,120 160,110 240,140 C320,170 400,130 480,90 C560,70 640,110 800,80 L800 220 L0 220 Z"
+                  fill="url(#area)" stroke="none" />
+                <path d="M0,160 C80,120 160,110 240,140 C320,170 400,130 480,90 C560,70 640,110 800,80" fill="none"
+                  stroke="#2494ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <g fill="#fff" stroke="#2494ff" stroke-width="2">
+                  <circle cx="240" cy="140" r="4" />
+                  <circle cx="480" cy="90" r="4" />
+                  <circle cx="560" cy="70" r="4" />
+                </g>
+              </svg>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+              <div class="stat-mini">
+                <div class="smalltxt">Total Leads</div>
+                <div class="num">25,307</div>
+              </div>
+              <div class="stat-mini">
+                <div class="smalltxt">Goal</div>
+                <div class="num">3,982</div>
+              </div>
+              <div class="stat-mini">
+                <div class="smalltxt">New Clients</div>
+                <div class="num">1,324</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="right">
+          <div class="card">
+            <h3>Quick KPIs</h3>
+            <div class="kpis" style="margin-top:8px">
+              <div class="kpi">
+                <div><small>Projects Completed</small>
+                  <div><strong>2,678</strong></div>
+                </div>
+                <div class="muted">↗︎</div>
+              </div>
+              <div class="kpi">
+                <div><small>Websites Delivered</small>
+                  <div><strong>1,234</strong></div>
+                </div>
+                <div class="muted">↗︎</div>
+              </div>
+              <div class="kpi">
+                <div><small>Marketing Campaigns</small>
+                  <div><strong>123</strong></div>
+                </div>
+                <div class="muted">↘︎</div>
+              </div>
+              <div class="kpi">
+                <div><small>Pending Tasks</small>
+                  <div><strong>432</strong></div>
+                </div>
+                <div class="muted">↗︎</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Service Category Insights</h3>
+            <div class="donut" style="margin-top:6px">
+              <svg viewBox="0 0 36 36">
+                <circle cx="18" cy="18" r="15.91549430918954" fill="none" stroke="#eee" stroke-width="6" />
+                <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#ff8a00" stroke-width="6"
+                  stroke-dasharray="30 70" stroke-dashoffset="25" transform="rotate(-90 18 18)" />
+                <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#2494ff" stroke-width="6"
+                  stroke-dasharray="25 75" stroke-dashoffset="-5" transform="rotate(-90 18 18)" />
+                <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#37b24d" stroke-width="6"
+                  stroke-dasharray="18 82" stroke-dashoffset="-35" transform="rotate(-90 18 18)" />
+                <text x="18" y="20.6" text-anchor="middle" font-size="4.0" fill="#122">64%</text>
+              </svg>
+
+              <div class="legend">
+                <div><strong>Service Split</strong></div>
+                <div style="display:flex;gap:8px;align-items:center"><span
+                    style="width:12px;height:12px;background:#ff8a00;border-radius:3px;display:inline-block"></span> Web
+                  Development <span class="muted" style="margin-left:auto">763</span></div>
+                <div style="display:flex;gap:8px;align-items:center"><span
+                    style="width:12px;height:12px;background:#2494ff;border-radius:3px;display:inline-block"></span>
+                  Digital Marketing <span class="muted" style="margin-left:auto">542</span></div>
+                <div style="display:flex;gap:8px;align-items:center"><span
+                    style="width:12px;height:12px;background:#37b24d;border-radius:3px;display:inline-block"></span>
+                  Branding & Creative <span class="muted" style="margin-left:auto">301</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Notes</h3>
+            <p class="smalltxt" style="margin:8px 0 0">This digital services dashboard is built using HTML, CSS and
+              inline SVG. Integrate APIs or a charting library for live performance tracking.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- section footer -->
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <!-- Logo & About -->
+        <div class="footer-logo">
+          <img src="./image/logo.webp" alt="Digital Services Logo">
+          <p>Your trusted partner in digital solutions, delivering innovative web, app, and marketing services.
+          </p>
+
+          <br>
+
+          <p>We provide comprehensive digital solutions designed to help businesses thrive in the online world.
+            From creating visually engaging websites and mobile applications to optimizing your online presence
+            with SEO
+            and digital marketing, our services are tailored to meet your unique needs. We focus on delivering
+            innovative
+            strategies, seamless user experiences, and measurable results that drive growth, enhance brand
+            visibility, and
+            connect you with your target audience effectively.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./service.html">Services</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: info@digitalservices.com</p>
+          <p>Phone: +91 12345 67890</p>
+          <p>Address: 123 Digital St, Tech City, India</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="./error.html"><img src="./image/facebook.jpg" alt="Facebook"></a>
+            <a href="./error.html"><img src="./image/twitter.png" alt="Twitter"></a>
+            <a href="./error.html"><img src="./image/link.jpg" alt="LinkedIn"></a>
+            <a href="./error.html"><img src="./image/insta.jpg" alt="Instagram"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Digital Services. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+      }
+    </script>
+
+  </body>
+
+</html>
