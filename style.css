@@ -603,13 +603,13 @@ color: white;
 }
 
 .latest-news .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 40px;
   margin-bottom: 10px;
 }
 
 .latest-news .section-header p {
   color: #666;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 
@@ -646,14 +646,14 @@ color: white;
 }
 
 .news-content .author {
-  font-size: 0.9rem;
+  font-size: 15px;
   color: #888;
   display: block;
   margin-bottom: 10px;
 }
 
 .news-content h3 {
-  font-size: 1.2rem;
+  font-size: 18px;
   margin-bottom: 15px;
   color: #333;
 }
@@ -665,7 +665,7 @@ color: white;
   background: #007bff;
   padding: 8px 15px;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 15px;
   transition: back 0.3s;
 }
 
@@ -712,7 +712,7 @@ color: white;
 }
 
 .footer-logo p {
-  font-size: 0.95rem;
+  font-size: 15px;
   line-height: 1.6;
   color: #aaa;
 }
@@ -721,7 +721,7 @@ color: white;
 .footer-links h4,
 .footer-contact h4,
 .footer-social h4 {
-  font-size: 1.1rem;
+  font-size: 18px;
   color: #fff;
   margin-bottom: 15px;
 }
@@ -738,7 +738,7 @@ color: white;
 
 .footer-contact p {
   margin-bottom: 10px;
-  font-size: 0.95rem;
+  font-size: 15px;
   color: #aaa;
 }
 
@@ -764,7 +764,7 @@ color: white;
   padding-top: 20px;
   border-top: 1px solid #333;
   margin-top: 30px;
-  font-size: 0.9rem;
+  font-size: 15px;
   color: #666;
 }
 
