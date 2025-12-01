@@ -429,6 +429,136 @@
 }
 
 
+/* section plan */
+
+/* Pricing Section */
+.pricing-section {
+    padding: 90px 5%;
+    background: #f6f8ff;
+    text-align: center;
+}
+
+.pricing-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+.pricing-subtitle {
+    font-size: 17px;
+    color: #555;
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+}
+
+/* Pricing Cards */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.pricing-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.09);
+    transition: .3s ease-in-out;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #283593;
+    margin-bottom: 18px;
+}
+
+.price span {
+    font-size: 42px;
+    color: #1b3ffb;
+    font-weight: 800;
+}
+
+.price {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.pricing-card ul li {
+    font-size: 16px;
+    padding: 8px 0;
+    color: #444;
+}
+
+/* Buttons */
+.pricing-btn {
+    background: #4D6CFA;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: .3s;
+}
+
+.pricing-btn:hover {
+    background: #1b3ffb;
+}
+
+/* Popular Plan Highlight */
+.pricing-popular {
+    border: 2px solid #4D6CFA;
+    transform: scale(1.05);
+}
+
+.tag {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #4D6CFA;
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+/* Popular button */
+.popular-btn {
+    background: #1b3ffb;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .pricing-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pricing-popular {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 576px) {
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-title {
+        font-size: 32px;
+    }
+}
 
 
 /* section footer */
