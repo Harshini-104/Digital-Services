@@ -754,9 +754,9 @@ color: white;
   transition: transform 0.3s;
 }
 
-.footer-social .social-icons img:hover {
+/* .footer-social .social-icons img:hover {
   transform: scale(1.2);
-}
+} */
 
 
 .footer-bottom {

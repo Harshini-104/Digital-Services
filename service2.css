@@ -463,14 +463,14 @@
     background: #ffffff;
     padding: 40px 30px;
     border-radius: 18px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.09);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
     transition: .3s ease-in-out;
     position: relative;
 }
 
 .pricing-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-card h3 {
@@ -639,9 +639,9 @@
     transition: transform 0.3s;
 }
 
-.footer-social .social-icons img:hover {
+/* .footer-social .social-icons img:hover {
     transform: scale(1.2);
-}
+} */
 
 
 .footer-bottom {

@@ -9,7 +9,7 @@
     width: 100%;
     background: #0d1625;
     padding: 15px 5%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     position: fixed;
     top: 0;
     left: 0;
@@ -77,39 +77,39 @@
 
 
 .dropdown-menu {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  min-width: auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: auto !important;
 }
 
 
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
 }
 
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+    display: block;
 }
 
 
 .dropdown-menu li a {
-  color: #fff; 
-  padding: 5px 0 !important;
-  display: block;
-  text-decoration: none;
-  background: transparent !important;
+    color: #fff;
+    padding: 5px 0 !important;
+    display: block;
+    text-decoration: none;
+    background: transparent !important;
 }
 
 .dropdown-menu li a:hover {
-  color: #0db2ff;
-  background: transparent !important;
+    color: #0db2ff;
+    background: transparent !important;
 }
 
 
@@ -121,7 +121,7 @@
 
     .nav-links {
         position: absolute;
-        top: -600px; 
+        top: -600px;
         left: 0;
         width: 100%;
         background: #0d1625;
@@ -130,11 +130,11 @@
         gap: 30px;
         padding: 40px 0 30px 0;
         transition: 0.4s ease;
-        box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
     }
 
     .nav-links.active {
-        top: 60px; 
+        top: 60px;
     }
 
     .nav-links li a {
@@ -164,7 +164,7 @@
 
 .contact-hero {
     width: 100%;
-    height: 420px; 
+    height: 420px;
     background: url('./image/contact.webp') no-repeat center center;
     background-size: cover;
     position: relative;
@@ -283,7 +283,8 @@ label {
     color: #333;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 12px 15px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -292,7 +293,8 @@ input, textarea {
     transition: 0.3s;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     border-color: #ff6600;
 }
 
@@ -326,7 +328,7 @@ textarea {
     width: 100%;
     height: 450px;
     border-radius: 12px;
-    box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -339,7 +341,7 @@ textarea {
         gap: 30px;
     }
 
-    .form-left, 
+    .form-left,
     .form-right {
         width: 100%;
     }
@@ -369,7 +371,7 @@ textarea {
     }
 
     .form-group {
-        width: 100%; 
+        width: 100%;
     }
 
     .contact-btn {
@@ -394,7 +396,8 @@ textarea {
         font-size: 15px;
     }
 
-    input, textarea {
+    input,
+    textarea {
         font-size: 15px;
         padding: 12px;
     }
@@ -584,99 +587,99 @@ textarea {
 /* section footer */
 
 .footer {
-  background: #111;
-  color: #ccc;
-  padding: 60px 0 20px;
-  font-family: 'Arial', sans-serif;
+    background: #111;
+    color: #ccc;
+    padding: 60px 0 20px;
+    font-family: 'Arial', sans-serif;
 }
 
 .footer a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s;
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer a:hover {
-  color: #007bff;
+    color: #007bff;
 }
 
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
 .footer-logo img {
-  width: 150px;
-  margin-bottom: 15px;
+    width: 150px;
+    margin-bottom: 15px;
 }
 
 .footer-logo p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #aaa;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #aaa;
 }
 
 
 .footer-links h4,
 .footer-contact h4,
 .footer-social h4 {
-  font-size: 20px;
-  color: #fff;
-  margin-bottom: 15px;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
 }
 
 .footer-links ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-links ul li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 
 .footer-contact p {
-  margin-bottom: 10px;
-  font-size: 15px;
-  color: #aaa;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #aaa;
 }
 
 
 .footer-social .social-icons {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 .footer-social .social-icons img {
-  width: 25px;
-  height: 25px;
-  transition: transform 0.3s;
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
 }
 
-.footer-social .social-icons img:hover {
-  transform: scale(1.2);
-}
+/* .footer-social .social-icons img:hover {
+    transform: scale(1.2);
+} */
 
 
 .footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #333;
-  margin-top: 30px;
-  font-size: 14px;
-  color: #666;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
 }
 
 
-@media(max-width: 768px){
-  .footer-container {
-    flex-direction: column;
-    gap: 30px;
-  }
+@media(max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
