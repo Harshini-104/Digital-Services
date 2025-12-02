@@ -56,50 +56,53 @@
     <!-- section form -->
 
     <section class="contact-form-section">
-        <div class="contact-form-container">
+    <div class="contact-form-container">
 
-            <div class="form-left">
-                <h2 data-aos="zoom-in">Send Us a Message</h2>
-                <p data-aos="zoom-in">Have questions or need support? Fill out the form and our team will reach out to you shortly.</p>
+        <div class="form-left">
+            <h2 data-aos="zoom-in">Send Us a Message</h2>
+            <p data-aos="zoom-in">Have questions or need support? Fill out the form and our team will reach out to you shortly.</p>
 
-                <form action="#" class="contact-form">
+            <form action="#" class="contact-form">
 
-                    <div class="form-group" data-aos="zoom-in">
-                        <label>Your Name</label>
-                        <input type="text" placeholder="Enter your name">
-                    </div>
+                <div class="form-group" data-aos="zoom-in">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
 
-                    <div class="form-group" data-aos="zoom-in">
-                        <label>Your Email</label>
-                        <input type="email" placeholder="Enter your email">
-                    </div>
+                <div class="form-group" data-aos="zoom-in">
+                    <label>Your Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
 
-                    <div class="form-group" data-aos="zoom-in">
-                        <label>Phone Number</label>
-                        <input type="text" placeholder="Enter your phone number">
-                    </div>
+                <div class="form-group" data-aos="zoom-in">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="Enter your phone number" 
+                           required pattern="[0-9]{10}" 
+                           title="Please enter a valid 10-digit phone number">
+                </div>
 
-                    <div class="form-group" data-aos="zoom-in">
-                        <label>Subject</label>
-                        <input type="text" placeholder="Enter subject">
-                    </div>
+                <div class="form-group" data-aos="zoom-in">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Enter subject" required>
+                </div>
 
-                    <div class="form-group full-width" data-aos="zoom-in">
-                        <label>Your Message</label>
-                        <textarea placeholder="Type your message here..."></textarea>
-                    </div>
+                <div class="form-group full-width" data-aos="zoom-in">
+                    <label>Your Message</label>
+                    <textarea placeholder="Type your message here..." required></textarea>
+                </div>
 
-                    <a href="./error.html"><button type="submit" class="contact-btn">Send Message</button></a>
+                <a href="./error.html"><button type="submit" class="contact-btn">Send Message</button></a>
 
-                </form>
-            </div>
-
-            <div class="form-right">
-                <img src="./image/contact img.webp" alt="Contact Image" data-aos="zoom-in">
-            </div>
-
+            </form>
         </div>
-    </section>
+
+        <div class="form-right">
+            <img src="./image/contact img.webp" alt="Contact Image" data-aos="zoom-in">
+        </div>
+
+    </div>
+</section>
+
 
     <!-- section faq -->
 
@@ -235,16 +238,8 @@
             once: false,
             mirror: true,
         });
-    </script
-
-
-
-
-    <script>
-        function toggleMenu() {
-            document.querySelector(".nav-links").classList.toggle("active");
-        }
     </script>
+    
 
 </body>
 

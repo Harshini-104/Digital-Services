@@ -334,23 +334,23 @@
 
     <!-- TOP CARDS -->
     <section class="top-cards">
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <h2>12,450</h2>
             <p>Total Users</p>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <h2>8,732</h2>
             <p>Active Subscriptions</p>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <h2>$ 5,120</h2>
             <p>Avg Revenue per User</p>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <h2>2 min</h2>
             <p>Avg Response Time</p>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <h2>156</h2>
             <p>Support Staff</p>
         </div>
@@ -358,11 +358,11 @@
 
     <!-- CHARTS -->
     <section class="charts-grid">
-        <div class="chart-box">
+        <div class="chart-box" data-aos="zoom-in">
             <h3>Free vs Paid Users Trend</h3>
             <canvas id="barChart"></canvas>
         </div>
-        <div class="chart-box">
+        <div class="chart-box" data-aos="zoom-in">
             <h3>User Feedback Ratings</h3>
             <canvas id="donutChart"></canvas>
         </div>
@@ -371,35 +371,35 @@
     <!-- BOTTOM GRID -->
     <section class="bottom-grid">
         <div class="table-box">
-            <h3>Users by Service Type</h3>
+            <h3 data-aos="zoom-in">Users by Service Type</h3>
             <table>
-                <tr>
+                <tr data-aos="zoom-in">
                     <th>Service</th>
                     <th>Free Users</th>
                     <th>Paid Users</th>
                 </tr>
-                <tr>
+                <tr data-aos="zoom-in">
                     <td>Streaming</td>
                     <td>3,420</td>
                     <td>1,872</td>
                 </tr>
-                <tr>
+                <tr data-aos="zoom-in">
                     <td>Cloud Storage</td>
                     <td>2,315</td>
                     <td>1,235</td>
                 </tr>
-                <tr>
+                <tr data-aos="zoom-in">
                     <td>Analytics</td>
                     <td>1,872</td>
                     <td>925</td>
                 </tr>
             </table>
         </div>
-        <div class="chart-box">
+        <div class="chart-box" data-aos="zoom-in">
             <h3>Avg Response Time by Service (min)</h3>
             <canvas id="horizontalChart"></canvas>
         </div>
-        <div class="chart-box">
+        <div class="chart-box" data-aos="zoom-in">
             <h3>Support Feedback Ratings</h3>
             <canvas id="ratingChart"></canvas>
         </div>
@@ -454,6 +454,16 @@
         function toggleMenu() {
             document.querySelector(".nav-links").classList.toggle("active");
         }
+    </script>
+
+    <script>
+        // $(document).on('ready', function () {
+        // initialization of aos
+        AOS.init({
+            duration: 650,
+            once: false,
+            mirror: true,
+        });
     </script>
 
 
