@@ -431,7 +431,7 @@
 
 /* section plan */
 
-/* Pricing Section */
+
 .pricing-section {
     padding: 90px 5%;
     background: #f6f8ff;
@@ -452,7 +452,7 @@
     margin: 0 auto 50px auto;
 }
 
-/* Pricing Cards */
+
 .pricing-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -503,7 +503,7 @@
     color: #444;
 }
 
-/* Buttons */
+
 .pricing-btn {
     background: #4D6CFA;
     color: #fff;
@@ -517,7 +517,7 @@
     background: #1b3ffb;
 }
 
-/* Popular Plan Highlight */
+
 .pricing-popular {
     border: 2px solid #4D6CFA;
     transform: scale(1.05);
