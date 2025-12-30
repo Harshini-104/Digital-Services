@@ -162,56 +162,66 @@
 
 
 
+
 .service-hero {
-    width: 100%;
-    height: 450px;
-    background: url('./image/contact.webp') center/cover no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 80vh;
+  width: 100%;
+  background: 
+    linear-gradient(
+      rgba(13, 22, 37, 0.75),
+      rgba(13, 22, 37, 0.75)
+    ),
+    url("./image/contact.webp"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
-.service-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
 
 .service-hero-content {
-    position: relative;
-    text-align: center;
-    color: #fff;
-    max-width: 800px;
-    padding: 20px;
+  max-width: 800px;
+  color: #ffffff;
 }
+
 
 .service-hero-content h1 {
-    font-size: 55px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    color: white;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
+
 
 .service-hero-content p {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #f1f1f1;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #dce3f0;
 }
 
-.service-hero-content h4 {
-    font-size: 18px;
+
+@media (max-width: 768px) {
+  .service-hero {
+    height: 80vh;
+  }
+
+  .service-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .service-hero-content p {
+    font-size: 16px;
+  }
 }
 
-.service-hero-content h4 a {
-    color: #ff6600;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.service-hero-content h4 span {
-    color: #ddd;
+@media (max-width: 480px) {
+  .service-hero-content h1 {
+    font-size: 32px;
+  }
 }
 
 
